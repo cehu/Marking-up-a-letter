@@ -20,4 +20,5 @@ p,ul,ol,dl,address {
 }
 
 p, li, dd, dt, address {
-  line-
+  line-height: 1.5;
+}
