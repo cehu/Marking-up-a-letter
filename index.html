@@ -3,35 +3,37 @@
 
   <head>
     <meta charset="utf-8">
-    <meta name="author" content="Andrei Cehan">
+    <meta name="author" content="Andrei Cehan"> <!-- wrong...content is for owner of the letter duuh.. -->
     <link rel="stylesheet" href="styles.css">
     <title>Work Application</title>
   </head>
 
   <body>
-    <header class="sender-column">
-      <p>
+
+      <p class="sender-column">
         <strong>Dr. Eleanor Gaye</strong> <br>
         Awesome Science faculty<br>
         University of Awesome<br>
         Bobtown, CA 99999,<br>
         USA<br>
-      </p>
+      </p> <!-- wrong.. </p> should close tag at line 22 -->
       <strong>Tel</strong>: 123-456-7890<br>
       <strong>Email</strong>: no_reply@example.com<br>
 
-      <time datetime="2016-02-20">20 January 2016<br></time>
-    </header>
-    <p><strong>Miss Eileen Dover</strong><br>
+      <time datetime="2016-02-20">20 January 2016<br></time> <!-- wrong.. also had to be nested with <p class="sender-column"> -->
+      </p>
+
+    <p>
+      <strong>Miss Eileen Dover</strong><br>
       4321 Cliff Top Edge<br>
       Dover, CT9 XXX<br>
       UK<br>
     </p>
     <h1><abbr title="Reply">Re</abbr>: Eileen Dover university application</h1>
 
-    <p>Dear Eileen,
+    <p>Dear Eileen,</p>  <!-- wrong.. each line has to be nested within <p> (fixed) -->
 
-      Thank you for your recent application to join us at the University of Awesome's science faculty to study as part of your PhD next year. I will answer your questions one by one, in the following sections.</p>
+      <p>Thank you for your recent application to join us at the University of Awesome's science faculty to study as part of your <abbr title="Doctor of Philosophy">PhD<abbr> next year. I will answer your questions one by one, in the following sections.</p> <!-- wrong..forgot to add <abbr +attribute> for PhD -->
 
     <h2>Starting dates</h2>
 
@@ -69,7 +71,7 @@
     <p>Yes, you are right! As part of my post-doctorate work, I did study exotic tribal dances. To answer your question, my favourite dances are as follows, with definitions:</p>
     <dl>
       <dt>Polynesian chicken dance</dt>
-      <dd>A little known but very influential dance dating back as far as 300<abbr title="Before Christ">BC</abbr>, a whole village would dance around in a circle like chickens, to encourage their livestock to be "fruitful"</q>.</dd>
+      <dd>A little known but <em>very</em> influential dance dating back as far as 300<abbr title="Before Christ">BC</abbr>, a whole village would dance around in a circle like chickens, to encourage their livestock to be "fruitful"</q>.</dd>
       <dt>Icelandic brownian shuffle</dt>
       <dd>Before the Icelanders developed fire as a means of getting warm, they used to practice this dance, which involved huddling close together in a circle on the floor, and shuffling their bodies around in imperceptibly tiny, very rapid
         movements. One
@@ -85,7 +87,7 @@
       <abbr title="Doctor"></abbr>Dr Eleanor Gaye</p>
 
     <footer>
-      <p>University of Awesome motto: <q cite="http://example.com">Be awesome to each other.</q> -- <cite>Bill S Preston, Esq</cite></p>
+      <p>University of Awesome motto: <q cite="http://example.com">Be awesome to each other.</q> -- <cite>Bill S Preston, <abbr title="Esquire">Esq</abbr></cite></p> <!-- wrong.. forogt <abbr> for Esq -->
     </footer>
 
   </body>
